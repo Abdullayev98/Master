@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+.sticky{
+    background: #fff;
+    padding: 10px 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+}
+header .logo{
+    color: #2b1057;
+    font-weight: 100px;
+    width: 300px;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+.sticky .logo{
+    color: #111;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+    padding: 0px;
+}
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navigation li a{
+    text-decoration: none;
+    color:#2b1057;
+    font-weight: 300;
+}
+.sticky .navigation li a
+{
+    color:#111;
+}
+header .navigation li a:hover
+{
+    color:#ff0157;
+}
+.sticky .navigation li a:hover
+{
+    color:#ff0157;
+}
+#asosiydiv{
+    border-left: 2px solid rgb(10, 6, 6);
+    border-top: 2px solid rgb(10, 6, 6);
+    border-right: 2px solid rgb(10, 6, 6);
+    border-bottom:2px solid rgb(10, 6, 6);
+
+}
+#asosiydiv2{
+    border-left: 2px solid rgb(10, 6, 6);
+    border-top: 2px solid rgb(10, 6, 6);
+    border-right: 2px solid rgb(10, 6, 6);
+    border-bottom: none;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+    padding-right: 5px;
+    margin-bottom: 0px!important;
+}
+.banner .content{
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 5em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+.btn{
+
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn:hover{
+    letter-spacing: 5px;
+}
+section{
+   padding-top: 80px; 
+}
+
+@media(max-width:991px){
+
+    header,
+    .sticky
+    {
+        padding: 15px 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        width: 100%;
+        height: calc(100%-68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+    }
+    header .navigation li {
+        margin-left: 0;
+    }
+    header .navigation li a{
+        color: #111;
+        font-size: 1.8em;
+    }
+    .menutoggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-image: url(https://avatars.mds.yandex.net/i?id=3535d13a07cc7829ae942d6b083aa9a230cb91c2-5242334-images-thumbs&n=13);
+        background-size:30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-position: center;
+    }
+    .menutoggle.active{
+        background-image: url(https://avatars.mds.yandex.net/i?id=ee630aa7cb805fb7cc1e06975144bca135768f0a-4449234-images-thumbs&n=13);
+        background-size:25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .sticky .menutoggle{
+        filter: invert(0);
+    }
+}
+@media(max-width: 480px){
+    .banner .content h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+}
